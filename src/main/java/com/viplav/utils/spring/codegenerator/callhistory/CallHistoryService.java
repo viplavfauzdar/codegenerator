@@ -1,4 +1,4 @@
-package com.viplav.utils.spring.codegenerator.utils;
+package com.viplav.utils.spring.codegenerator.callhistory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

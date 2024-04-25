@@ -1,4 +1,4 @@
-package com.viplav.utils.spring.codegenerator.utils;
+package com.viplav.utils.spring.codegenerator.misc;
 
 import java.io.File;
 import java.io.FileInputStream;

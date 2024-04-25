@@ -3,12 +3,17 @@ package com.viplav.utils.spring.codegenerator.controller;
 import org.h2.tools.DeleteDbFiles;
 import java.util.List; // Corrected import statement
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.viplav.utils.spring.codegenerator.misc.Employees;
+import com.viplav.utils.spring.codegenerator.misc.EmployeesRepository;
 import com.viplav.utils.spring.codegenerator.service.DbOpsService;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -68,7 +73,7 @@ public class DbOpsController {
         return dbOps.getColumns(tableName);
     }
 
-    @GetMapping("/tabledata/{tableName}")
+    @GetMapping(value = "/tabledata/{tableName}")
     public List<String> getTableData(@PathVariable String tableName) throws SQLException {
         tableName = tableName.toUpperCase();
         return dbOps.getTableData(tableName);

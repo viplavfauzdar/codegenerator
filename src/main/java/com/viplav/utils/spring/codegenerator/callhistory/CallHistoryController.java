@@ -1,4 +1,4 @@
-package com.viplav.utils.spring.codegenerator.utils;
+package com.viplav.utils.spring.codegenerator.callhistory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,6 +20,7 @@ public class CallHistoryController {
         this.callHistoryService = callHistoryService;
     }
 
+    @CrossOrigin
     @GetMapping("/findall")
     public List<CallHistory> getAllCallHistories() {
         return callHistoryService.getAllCallHistories();

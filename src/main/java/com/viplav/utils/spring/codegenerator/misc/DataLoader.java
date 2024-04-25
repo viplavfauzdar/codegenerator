@@ -1,3 +1,4 @@
+package com.viplav.utils.spring.codegenerator.misc;
 /*package com.viplav.utils.spring.codegenerator.utils;
 
 import java.io.BufferedReader;

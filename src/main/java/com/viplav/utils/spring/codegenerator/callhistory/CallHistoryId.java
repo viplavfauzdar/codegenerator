@@ -1,4 +1,4 @@
-package com.viplav.utils.spring.codegenerator.utils;
+package com.viplav.utils.spring.codegenerator.callhistory;
 
 import java.math.BigDecimal;
 
