@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/employees")
@@ -16,6 +17,12 @@ public class EmployeesController {
     @GetMapping
     public List<Employees> getAllEmployees() {
         return employeesRepository.findAll();
+    }
+
+    @CrossOrigin
+    @GetMapping("/findbyid/{id}")
+    public Optional<Employees> getOneEmployeeById(Long id) {
+        return employeesRepository.findById(id);
     }
 
     @PostMapping
