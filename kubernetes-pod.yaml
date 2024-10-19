@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: codegenerator2
+spec:
+  selector:
+    matchLabels:
+      run: codegenerator
+  template:
+    metadata:
+      labels:
+        run: codegenerator
+    spec:
+      containers:
+      - name: codegenerator
+        image: localhost:5001/codegenerator
+        ports:
+        - containerPort: 8080
